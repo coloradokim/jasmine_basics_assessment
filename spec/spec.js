@@ -22,6 +22,8 @@ describe('test two', function() {
 describe('test three', function() {
  it('accepts an array of numbers, and returns the median of those numbers', function() {
    expect(code.medianScore([52,80,80,86,94])).toEqual(80);
+   expect(code.medianScore([7,9,12,13,16])).toEqual(12);
+   expect(code.medianScore([52,80,80,NaN,94])).toEqual(80);
 
   });
 });
