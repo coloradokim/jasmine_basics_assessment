@@ -18,15 +18,39 @@ module.exports = {
   else {
     return 'not possible';
     }
-  }
-}, 
+  },
 
-Write a function 'averageScore` which takes an array of
-test scores and returns the average score.
+  averageScore: function(arr) {
+    var result = 0;
+    for(var i = 0; i < arr.length; i++){
+        result += arr[i]/arr.length;
+    }
+    return result;
+  },
 
-```
-averageScore([90, 95, 87, 60]);
-//=> 83
+  medianScore: function(arr) {
+      arr.sort( function(a,b) {return a - b;} );
+      var half = Math.floor(arr.length/2);
+      if(arr.length % 2)
+          return arr[half];
+      else
+          return (arr[half-1] + arr[half]) / 2.0;
+  },
 
-module.exports = {
-  letterGrader: function(num) {
+  modeScore: function(arr) {
+    var mode = {};
+    var max = 0;
+    var count = 0;
+
+    arr.forEach(function(e) {
+      if (mode[e]) { mode[e]++; }
+        else { mode[e] = 1; }
+
+        if (count<mode[e]) {
+            max = e;
+            count = mode[e];
+            }
+        });
+        return max;
+    }
+  };
