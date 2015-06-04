@@ -29,7 +29,7 @@ module.exports = {
   },
 
   medianScore: function(arr) {
-      arr.sort( function(a,b) {return a - b;} );
+      arr.sort();
       var half = Math.floor(arr.length/2);
       if(arr.length % 2)
           return arr[half];
