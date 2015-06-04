@@ -16,6 +16,17 @@ module.exports = {
       return 'F';
   }
   else {
-    return 'not possible'
+    return 'not possible';
+    }
   }
-}
+}, 
+
+Write a function 'averageScore` which takes an array of
+test scores and returns the average score.
+
+```
+averageScore([90, 95, 87, 60]);
+//=> 83
+
+module.exports = {
+  letterGrader: function(num) {
